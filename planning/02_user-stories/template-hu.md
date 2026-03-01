@@ -15,7 +15,7 @@ Tipo: [FUNCIONAL | TECNICA | NO_FUNCIONAL | UI_UX]
 Fase: [PHASE_0_FUNDACION | PHASE_1_MVP | PHASE_2_SCALE]
 Epic:
 Estado: [PENDIENTE | EN_PROGRESO | PARCIAL | FINALIZADA | BLOQUEADA | DESCARTADA]
-Prioridad: [CRITICA | ALTA | MEDIA | BAJA]
+Prioridad: [P0 | P1 | P2 | P3]
 
 Descripción:
 Como [tipo de usuario],

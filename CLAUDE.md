@@ -37,6 +37,12 @@ Cada historia debe incluir:
 - Fecha de creación
 - Fecha de última actualización
 
+### Prioridades permitidas:
+- `P0` — Bloqueante / fundacional
+- `P1` — Funcionalidad core MVP
+- `P2` — Importante pero diferible
+- `P3` — Deseable, baja urgencia
+
 ### Estados permitidos:
 - `PENDIENTE`
 - `EN_PROGRESO`
