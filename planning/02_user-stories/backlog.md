@@ -17,8 +17,8 @@
 
 | Estado | Cantidad |
 |--------|----------|
-| FINALIZADA | 1 |
-| PENDIENTE | 42 |
+| FINALIZADA | 11 |
+| PENDIENTE | 32 |
 | **Total** | **43** |
 
 ---
@@ -28,16 +28,16 @@
 | ID | Título | Tipo | Prioridad | Estado | Dependencias |
 |----|--------|------|-----------|--------|--------------|
 | HU-FUNC-FOUND-001 | Estructura oficial del repositorio y carpetas | FUNCIONAL | P0 | FINALIZADA | Ninguna |
-| HU-FUNC-FOUND-002 | Roadmap por fases publicado en planning | FUNCIONAL | P0 | PENDIENTE | HU-FUNC-FOUND-001 |
-| HU-TECH-FOUND-001 | Proyecto base Expo (React Native) listo para escalar | TECNICA | P0 | PENDIENTE | HU-FUNC-FOUND-001 |
-| HU-TECH-FOUND-002 | Cliente HTTP base + normalización de errores | TECNICA | P0 | PENDIENTE | HU-TECH-FOUND-001, HU-NF-FOUND-001 |
-| HU-TECH-FOUND-003 | SQLite base + repositorios (offline-first) | TECNICA | P0 | PENDIENTE | HU-TECH-FOUND-001 |
-| HU-TECH-FOUND-004 | Sync Queue base (job runner local) | TECNICA | P0 | PENDIENTE | HU-TECH-FOUND-001, HU-TECH-FOUND-003 |
-| HU-TECH-FOUND-005 | Telemetría base + correlación por session_id | TECNICA | P0 | PENDIENTE | HU-TECH-FOUND-001, HU-TECH-FOUND-003 |
-| HU-NF-FOUND-001 | Cifrado de datos sensibles en storage | NO_FUNCIONAL | P0 | PENDIENTE | HU-TECH-FOUND-001 |
-| HU-NF-FOUND-002 | Catálogo de errores estándar (UX-friendly) | NO_FUNCIONAL | P0 | PENDIENTE | HU-FUNC-FOUND-001, HU-TECH-FOUND-002 |
-| HU-UI-FOUND-001 | Estados globales UI (loading/error/offline) consistentes | UI_UX | P0 | PENDIENTE | HU-TECH-FOUND-001, HU-NF-FOUND-002 |
-| HU-UI-FOUND-002 | Base de navegación y layout (safe areas, estructura MVP) | UI_UX | P0 | PENDIENTE | HU-TECH-FOUND-001, HU-UI-FOUND-001 |
+| HU-FUNC-FOUND-002 | Roadmap por fases publicado en planning | FUNCIONAL | P0 | FINALIZADA | HU-FUNC-FOUND-001 |
+| HU-TECH-FOUND-001 | Proyecto base Expo (React Native) listo para escalar | TECNICA | P0 | FINALIZADA | HU-FUNC-FOUND-001 |
+| HU-TECH-FOUND-002 | Cliente HTTP base + normalización de errores | TECNICA | P0 | FINALIZADA | HU-TECH-FOUND-001, HU-NF-FOUND-001 |
+| HU-TECH-FOUND-003 | SQLite base + repositorios (offline-first) | TECNICA | P0 | FINALIZADA | HU-TECH-FOUND-001 |
+| HU-TECH-FOUND-004 | Sync Queue base (job runner local) | TECNICA | P0 | FINALIZADA | HU-TECH-FOUND-001, HU-TECH-FOUND-003 |
+| HU-TECH-FOUND-005 | Telemetría base + correlación por session_id | TECNICA | P0 | FINALIZADA | HU-TECH-FOUND-001, HU-TECH-FOUND-003 |
+| HU-NF-FOUND-001 | Cifrado de datos sensibles en storage | NO_FUNCIONAL | P0 | FINALIZADA | HU-TECH-FOUND-001 |
+| HU-NF-FOUND-002 | Catálogo de errores estándar (UX-friendly) | NO_FUNCIONAL | P0 | FINALIZADA | HU-FUNC-FOUND-001, HU-TECH-FOUND-002 |
+| HU-UI-FOUND-001 | Estados globales UI (loading/error/offline) consistentes | UI_UX | P0 | FINALIZADA | HU-TECH-FOUND-001, HU-NF-FOUND-002 |
+| HU-UI-FOUND-002 | Base de navegación y layout (safe areas, estructura MVP) | UI_UX | P0 | FINALIZADA | HU-TECH-FOUND-001, HU-UI-FOUND-001 |
 
 ---
 
@@ -130,16 +130,16 @@
 graph TD
     subgraph PHASE_0["PHASE 0 - FUNDACION"]
         FUNC-FOUND-001["✅ HU-FUNC-FOUND-001<br/>Estructura repo"]
-        FUNC-FOUND-002["HU-FUNC-FOUND-002<br/>Roadmap"]
-        TECH-FOUND-001["HU-TECH-FOUND-001<br/>Proyecto Expo"]
-        TECH-FOUND-002["HU-TECH-FOUND-002<br/>HTTP Client"]
-        TECH-FOUND-003["HU-TECH-FOUND-003<br/>SQLite"]
-        TECH-FOUND-004["HU-TECH-FOUND-004<br/>Sync Queue"]
-        TECH-FOUND-005["HU-TECH-FOUND-005<br/>Telemetría"]
-        NF-FOUND-001["HU-NF-FOUND-001<br/>Cifrado"]
-        NF-FOUND-002["HU-NF-FOUND-002<br/>Error Catalog"]
-        UI-FOUND-001["HU-UI-FOUND-001<br/>Estados UI"]
-        UI-FOUND-002["HU-UI-FOUND-002<br/>Navegación"]
+        FUNC-FOUND-002["✅ HU-FUNC-FOUND-002<br/>Roadmap"]
+        TECH-FOUND-001["✅ HU-TECH-FOUND-001<br/>Proyecto Expo"]
+        TECH-FOUND-002["✅ HU-TECH-FOUND-002<br/>HTTP Client"]
+        TECH-FOUND-003["✅ HU-TECH-FOUND-003<br/>SQLite"]
+        TECH-FOUND-004["✅ HU-TECH-FOUND-004<br/>Sync Queue"]
+        TECH-FOUND-005["✅ HU-TECH-FOUND-005<br/>Telemetría"]
+        NF-FOUND-001["✅ HU-NF-FOUND-001<br/>Cifrado"]
+        NF-FOUND-002["✅ HU-NF-FOUND-002<br/>Error Catalog"]
+        UI-FOUND-001["✅ HU-UI-FOUND-001<br/>Estados UI"]
+        UI-FOUND-002["✅ HU-UI-FOUND-002<br/>Navegación"]
 
         FUNC-FOUND-001 --> FUNC-FOUND-002
         FUNC-FOUND-001 --> TECH-FOUND-001

@@ -7,7 +7,7 @@
 | Tipo | UI_UX |
 | Fase | PHASE_0_FUNDACION |
 | Epic | UI Base |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -22,11 +22,11 @@ para acceder rápidamente a cada sección de la app.
 - Navegación funcional entre pantallas stub.
 
 ## Criterios de Aceptación
-- [ ] Navegación con stack y tabs configurada
-- [ ] Pantallas stub para Login, Catálogo, Carrito, Checkout, Pedidos
-- [ ] Safe areas respetadas en ambas plataformas
-- [ ] Tap targets de mínimo 44px
-- [ ] Navegación funcional entre todas las pantallas stub
+- [x] Navegación con stack y tabs configurada
+- [x] Pantallas stub para Login, Catálogo, Carrito, Checkout, Pedidos
+- [x] Safe areas respetadas en ambas plataformas
+- [x] Tap targets de mínimo 44px
+- [x] Navegación funcional entre todas las pantallas stub
 
 ## Dependencias
 - HU-TECH-FOUND-001

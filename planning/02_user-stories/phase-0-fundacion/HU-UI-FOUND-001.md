@@ -7,7 +7,7 @@
 | Tipo | UI_UX |
 | Fase | PHASE_0_FUNDACION |
 | Epic | UI Base |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -21,10 +21,10 @@ para entender siempre qué está pasando.
 - Error: mensaje humano del catálogo de errores + botón reintentar.
 
 ## Criterios de Aceptación
-- [ ] Componente Loading (skeleton/spinner) creado y reutilizable
-- [ ] Componente OfflineBanner creado (no intrusivo)
-- [ ] Componente ErrorView creado (mensaje + CTA reintentar)
-- [ ] Componentes usados en pantalla placeholder de demostración
+- [x] Componente Loading (skeleton/spinner) creado y reutilizable
+- [x] Componente OfflineBanner creado (no intrusivo)
+- [x] Componente ErrorView creado (mensaje + CTA reintentar)
+- [x] Componentes usados en pantalla placeholder de demostración
 
 ## Dependencias
 - HU-TECH-FOUND-001

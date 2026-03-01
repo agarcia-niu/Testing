@@ -7,7 +7,7 @@
 | Tipo | NO_FUNCIONAL |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Seguridad |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -21,10 +21,10 @@ para proteger mi información personal y credenciales.
 - Drafts de orden cifrados o minimizados en almacenamiento local.
 
 ## Criterios de Aceptación
-- [ ] Token almacenado con cifrado (SecureStore o equivalente)
-- [ ] Logout limpia secretos completamente
-- [ ] Drafts de orden protegidos en storage
-- [ ] Verificación de que no hay datos sensibles en texto plano en storage
+- [x] Token almacenado con cifrado (SecureStore o equivalente)
+- [x] Logout limpia secretos completamente
+- [x] Drafts de orden protegidos en storage
+- [x] Verificación de que no hay datos sensibles en texto plano en storage
 
 ## Dependencias
 - HU-TECH-FOUND-001

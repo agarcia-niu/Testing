@@ -7,7 +7,7 @@
 | Tipo | FUNCIONAL |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Fundaciones |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -20,10 +20,10 @@ para alinear prioridades y medir avance del proyecto.
 - Incluye priorización P0/P1/P2 y KPI de conversión.
 
 ## Criterios de Aceptación
-- [ ] Roadmap publicado con objetivos por fase
-- [ ] Incluye priorización P0/P1/P2
-- [ ] KPI de conversión definido
-- [ ] Criterios de entrada/salida por fase documentados
+- [x] Roadmap publicado con objetivos por fase
+- [x] Incluye priorización P0/P1/P2
+- [x] KPI de conversión definido
+- [x] Criterios de entrada/salida por fase documentados
 
 ## Dependencias
 - HU-FUNC-FOUND-001

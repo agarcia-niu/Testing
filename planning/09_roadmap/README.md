@@ -8,22 +8,22 @@
 
 ### FUNCIONAL
 - [x] HU-FUNC-FOUND-001 — Estructura oficial del repositorio y carpetas
-- [ ] HU-FUNC-FOUND-002 — Roadmap por fases publicado en planning
+- [x] HU-FUNC-FOUND-002 — Roadmap por fases publicado en planning
 
 ### TECNICA
-- [ ] HU-TECH-FOUND-001 — Proyecto base Expo (React Native) listo para escalar
-- [ ] HU-TECH-FOUND-002 — Cliente HTTP base + normalización de errores
-- [ ] HU-TECH-FOUND-003 — SQLite base + repositorios (offline-first)
-- [ ] HU-TECH-FOUND-004 — Sync Queue base (job runner local)
-- [ ] HU-TECH-FOUND-005 — Telemetría base + correlación por session_id
+- [x] HU-TECH-FOUND-001 — Proyecto base Expo (React Native) listo para escalar
+- [x] HU-TECH-FOUND-002 — Cliente HTTP base + normalización de errores
+- [x] HU-TECH-FOUND-003 — SQLite base + repositorios (offline-first)
+- [x] HU-TECH-FOUND-004 — Sync Queue base (job runner local)
+- [x] HU-TECH-FOUND-005 — Telemetría base + correlación por session_id
 
 ### NO_FUNCIONAL
-- [ ] HU-NF-FOUND-001 — Cifrado de datos sensibles en storage
-- [ ] HU-NF-FOUND-002 — Catálogo de errores estándar (UX-friendly)
+- [x] HU-NF-FOUND-001 — Cifrado de datos sensibles en storage
+- [x] HU-NF-FOUND-002 — Catálogo de errores estándar (UX-friendly)
 
 ### UI_UX
-- [ ] HU-UI-FOUND-001 — Estados globales UI (loading/error/offline) consistentes
-- [ ] HU-UI-FOUND-002 — Base de navegación y layout (safe areas, estructura MVP)
+- [x] HU-UI-FOUND-001 — Estados globales UI (loading/error/offline) consistentes
+- [x] HU-UI-FOUND-002 — Base de navegación y layout (safe areas, estructura MVP)
 
 ---
 
@@ -84,6 +84,6 @@
 
 ---
 
-> **Estado**: EN_PROGRESO — PHASE_0_FUNDACION
+> **Estado**: PHASE_0_FUNDACION COMPLETADA — Próximo: PHASE_1_MVP
 > Actualizar este documento al finalizar cada HU.
 > Última actualización: 2026-03-01

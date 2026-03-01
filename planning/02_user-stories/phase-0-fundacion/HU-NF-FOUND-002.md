@@ -7,7 +7,7 @@
 | Tipo | NO_FUNCIONAL |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Calidad |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -21,10 +21,10 @@ para saber qué hacer cuando algo falla.
 - UI consume el catálogo para mostrar mensajes consistentes.
 
 ## Criterios de Aceptación
-- [ ] `planning/07_api-contracts/error-catalog.md` creado con todos los tipos de error
-- [ ] Cada error tiene: código, mensaje humano, acción recomendada (CTA)
-- [ ] Catálogo usable por componentes UI
-- [ ] Cubre: network, timeout, 401, 403, 404, 422, 500, offline
+- [x] `planning/07_api-contracts/error-catalog.md` creado con todos los tipos de error
+- [x] Cada error tiene: código, mensaje humano, acción recomendada (CTA)
+- [x] Catálogo usable por componentes UI
+- [x] Cubre: network, timeout, 401, 403, 404, 422, 500, offline
 
 ## Dependencias
 - HU-FUNC-FOUND-001

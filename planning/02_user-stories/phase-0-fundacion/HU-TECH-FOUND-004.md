@@ -7,7 +7,7 @@
 | Tipo | TECNICA |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Sync |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -22,11 +22,11 @@ para garantizar que operaciones críticas (como crear orden) se completen de for
 - Retries con backoff controlado.
 
 ## Criterios de Aceptación
-- [ ] Sync queue implementada con persistencia en SQLite
-- [ ] Estados de job correctamente gestionados (PENDING → SENDING → CONFIRMED/FAILED)
-- [ ] Runner que procesa jobs en background sin bloquear UI
-- [ ] Retries con backoff exponencial controlado
-- [ ] Encola/procesa job dummy contra mock exitosamente
+- [x] Sync queue implementada con persistencia en SQLite
+- [x] Estados de job correctamente gestionados (PENDING → SENDING → CONFIRMED/FAILED)
+- [x] Runner que procesa jobs en background sin bloquear UI
+- [x] Retries con backoff exponencial controlado
+- [x] Encola/procesa job dummy contra mock exitosamente
 
 ## Dependencias
 - HU-TECH-FOUND-001

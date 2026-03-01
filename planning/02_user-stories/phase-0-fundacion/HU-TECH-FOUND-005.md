@@ -7,7 +7,7 @@
 | Tipo | TECNICA |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Observabilidad |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -22,11 +22,11 @@ para poder medir el comportamiento del usuario y diagnosticar problemas.
 - Eventos almacenados localmente antes de enviar.
 
 ## Criterios de Aceptación
-- [ ] session_id generado al iniciar app
-- [ ] Todos los eventos incluyen session_id
-- [ ] Configuración enable/disable funcional
-- [ ] Eventos registrados localmente con formato estándar
-- [ ] Interfaz de telemetría definida (sin backend real)
+- [x] session_id generado al iniciar app
+- [x] Todos los eventos incluyen session_id
+- [x] Configuración enable/disable funcional
+- [x] Eventos registrados localmente con formato estándar
+- [x] Interfaz de telemetría definida (sin backend real)
 
 ## Dependencias
 - HU-TECH-FOUND-001

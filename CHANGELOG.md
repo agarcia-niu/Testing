@@ -6,6 +6,44 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 
 ---
 
+## [0.3.0] - 2026-03-01
+
+### Agregado — Phase 0B (Governance)
+- 5 ADRs técnicos: ADR-002 (Expo), ADR-003 (HTTP client), ADR-004 (SQLite), ADR-005 (cifrado), ADR-006 (navegación).
+- 4 documentos de arquitectura en `planning/03_architecture/`:
+  - `idempotencia.md` — Estrategia client_order_id para dedup de órdenes.
+  - `estados-orden.md` — Estados locales, transiciones y mapeo a WooCommerce.
+  - `politica-datos-sensibles.md` — Clasificación de datos y política de limpieza.
+  - `reconciliacion.md` — Pull incremental con modified_after, remote siempre gana.
+- `planning/09_roadmap/phase-plan.md` — Plan formal con criterios de entrada/salida y KPIs.
+
+### Agregado — Phase 0A (Base Técnica)
+- Proyecto Expo SDK 55 inicializado con TypeScript strict.
+- `src/core/` — Tipos (AppError, ApiResponse, Result<T>, Product, CartItem, Order, SyncJob, TelemetryEvent), config y catálogo de errores (14 códigos).
+- `src/infra/security/` — SecureStorage wrapper (expo-secure-store) + AuthStorage (session management).
+- `src/infra/http/` — HttpClient fetch wrapper con interceptor JWT, timeout AbortController, normalización de errores.
+- `src/infra/storage/` — SQLite singleton con migration runner, migración 001 (5 tablas), 4 repositorios CRUD.
+- `src/infra/sync/` — SyncQueue con jobRunner, retry backoff exponencial, recovery de jobs stuck.
+- `src/infra/telemetry/` — SessionManager (UUID), TelemetryService (track + flush + autoFlush).
+- `src/ui/components/` — Loading, ErrorView, OfflineBanner.
+- `src/ui/hooks/` — useNetworkStatus (NetInfo).
+- `app/` — Navegación Expo Router: root layout, tabs (Catálogo, Carrito, Pedidos), Login, Checkout (modal), 404.
+
+### Agregado — Phase 0C (Arquitectura Checkout)
+- `planning/03_architecture/modelo-order-draft.md` — Modelo completo de order_draft.
+- `planning/03_architecture/flujo-checkout.md` — Flujo paso a paso con manejo de errores y reglas de negocio.
+- `planning/03_architecture/degradacion-sistema.md` — Estrategia de degradación por niveles.
+- `planning/06_flow-diagrams/flujo-compra.md` — Diagramas Mermaid completos del flujo de compra.
+
+### Modificado
+- `CLAUDE.md` — Secciones 8-12: convenciones de carpetas, sync rules, idempotencia, checkout flow, política de datos.
+- 11 HUs de Phase 0 marcadas como FINALIZADA (todas completadas).
+- `planning/02_user-stories/backlog.md` — Estado general actualizado (11 FINALIZADAS).
+- `planning/09_roadmap/README.md` — Phase 0 completada.
+- `planning/00_index.md` — Fase actual: PHASE_1_MVP.
+
+---
+
 ## [0.2.0] - 2026-03-01
 
 ### Agregado

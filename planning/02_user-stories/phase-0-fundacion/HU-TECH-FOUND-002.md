@@ -7,7 +7,7 @@
 | Tipo | TECNICA |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Networking |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -22,11 +22,11 @@ para que todas las llamadas de red sean consistentes y mantenibles.
 - No se implementan endpoints reales (solo interfaz y mocks).
 
 ## Criterios de Aceptación
-- [ ] HttpClient central implementado con interceptores
-- [ ] Timeout configurable definido
-- [ ] Formato de error estándar definido e implementado
-- [ ] Soporte JWT (attach token si existe)
-- [ ] Sin endpoints reales (solo contra mocks)
+- [x] HttpClient central implementado con interceptores
+- [x] Timeout configurable definido
+- [x] Formato de error estándar definido e implementado
+- [x] Soporte JWT (attach token si existe)
+- [x] Sin endpoints reales (solo contra mocks)
 
 ## Dependencias
 - HU-TECH-FOUND-001

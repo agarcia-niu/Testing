@@ -7,7 +7,7 @@
 | Tipo | TECNICA |
 | Fase | PHASE_0_FUNDACION |
 | Epic | Storage |
-| Estado | PENDIENTE |
+| Estado | FINALIZADA |
 | Prioridad | P0 |
 
 ## Descripción
@@ -21,10 +21,10 @@ para soportar el modo offline-first de la aplicación.
 - Metadata de sincronización (updated_at, last_sync_at) en cada tabla.
 
 ## Criterios de Aceptación
-- [ ] SQLite configurado con migraciones versionadas
-- [ ] CRUD implementado y probado por entidad
-- [ ] Campos de metadata de sync (updated_at, last_sync_at) en cada tabla
-- [ ] Repositorios con interfaz consistente
+- [x] SQLite configurado con migraciones versionadas
+- [x] CRUD implementado y probado por entidad
+- [x] Campos de metadata de sync (updated_at, last_sync_at) en cada tabla
+- [x] Repositorios con interfaz consistente
 
 ## Dependencias
 - HU-TECH-FOUND-001
