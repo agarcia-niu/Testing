@@ -11,14 +11,14 @@ Este archivo sirve como índice central de toda la documentación de planificaci
 | Carpeta | Contenido | Estado |
 |---------|-----------|--------|
 | `01_product/` | Definición de producto, visión, alcance | PENDIENTE |
-| `02_user-stories/` | Historias de Usuario y plantilla HU | PENDIENTE |
+| `02_user-stories/` | Historias de Usuario y plantilla HU (43 HUs) | EN_PROGRESO |
 | `03_architecture/` | Arquitectura técnica del sistema | PENDIENTE |
-| `04_technical-decisions/` | ADRs (Architecture Decision Records) | PENDIENTE |
+| `04_technical-decisions/` | ADRs (Architecture Decision Records) | EN_PROGRESO |
 | `05_prompts-registry/` | Registro de prompts utilizados | PENDIENTE |
 | `06_flow-diagrams/` | Diagramas de flujo (Mermaid) | PENDIENTE |
 | `07_api-contracts/` | Contratos de API (WooCommerce, etc.) | PENDIENTE |
 | `08_non-functional/` | Requisitos no funcionales | PENDIENTE |
-| `09_roadmap/` | Roadmap del proyecto por fases | PENDIENTE |
+| `09_roadmap/` | Roadmap del proyecto por fases | EN_PROGRESO |
 
 ---
 
