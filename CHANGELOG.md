@@ -6,6 +6,30 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 
 ---
 
+## [0.4.0] - 2026-03-04
+
+### Agregado — Phase 1 Sprint 1 (Catálogo + Carrito)
+- ADR-007: Decisión de usar Basic Auth con consumer keys para MVP.
+- `src/modules/catalog/` — Módulo de catálogo:
+  - `types.ts` — Interface WooCommerceProduct y mapeo a entidad local.
+  - `catalogService.ts` — Sync incremental de productos (modified_after) + lectura local.
+- `src/modules/cart/` — Módulo de carrito:
+  - `types.ts` — Interface CartItemWithProduct (cart item enriquecido con datos de producto).
+  - `cartService.ts` — Lógica de negocio: add/remove/update quantity, subtotal, cart con productos.
+- `src/ui/components/ProductCard.tsx` — Card de producto con imagen, precio, badge de stock.
+- `src/ui/hooks/useCatalog.ts` — Hook para catálogo: sync, carga local, pull-to-refresh.
+- `src/ui/hooks/useCart.ts` — Hook para carrito: CRUD de items, subtotal, conteo.
+- `app/product/[id].tsx` — Pantalla de detalle de producto con botón "Agregar al carrito".
+
+### Modificado
+- `src/infra/security/secureStorage.ts` — Soporte para almacenar consumer key/secret en SecureStore.
+- `src/infra/http/httpClient.ts` — Interceptor de auth: Basic Auth (consumer keys) con fallback a Bearer token.
+- `app/(tabs)/catalog.tsx` — Pantalla real con FlatList, ProductCard, pull-to-refresh, loading/error/empty states.
+- `app/(tabs)/cart.tsx` — Pantalla real con items, controles de cantidad, subtotal, CTA "Ir a pagar".
+- `app/_layout.tsx` — Registrada ruta product/[id] en Stack navigator.
+
+---
+
 ## [0.3.1] - 2026-03-04
 
 ### Agregado

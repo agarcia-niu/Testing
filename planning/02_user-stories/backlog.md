@@ -18,7 +18,9 @@
 | Estado | Cantidad |
 |--------|----------|
 | FINALIZADA | 11 |
-| PENDIENTE | 32 |
+| EN_PROGRESO | 6 |
+| PARCIAL | 1 |
+| PENDIENTE | 25 |
 | **Total** | **43** |
 
 ---
@@ -55,18 +57,18 @@
 
 | ID | Título | Tipo | Prioridad | Estado | Dependencias |
 |----|--------|------|-----------|--------|--------------|
-| HU-FUNC-CAT-001 | Navegar catálogo y categorías offline (modo lectura) | FUNCIONAL | P0 | PENDIENTE | HU-FUNC-AUTH-001, HU-TECH-FOUND-003, HU-TECH-CAT-001 |
-| HU-TECH-CAT-001 | Sincronización incremental de catálogo (pull) | TECNICA | P0 | PENDIENTE | HU-TECH-FOUND-002, HU-TECH-FOUND-003 |
-| HU-NF-CAT-001 | Performance catálogo en gama media | NO_FUNCIONAL | P0 | PENDIENTE | HU-FUNC-CAT-001, HU-TECH-CAT-001 |
-| HU-UI-CAT-001 | Cards de producto con jerarquía clara | UI_UX | P0 | PENDIENTE | HU-FUNC-CAT-001, HU-UI-FOUND-001 |
+| HU-FUNC-CAT-001 | Navegar catálogo y categorías offline (modo lectura) | FUNCIONAL | P0 | EN_PROGRESO | HU-FUNC-AUTH-001, HU-TECH-FOUND-003, HU-TECH-CAT-001 |
+| HU-TECH-CAT-001 | Sincronización incremental de catálogo (pull) | TECNICA | P0 | EN_PROGRESO | HU-TECH-FOUND-002, HU-TECH-FOUND-003 |
+| HU-NF-CAT-001 | Performance catálogo en gama media | NO_FUNCIONAL | P0 | PARCIAL | HU-FUNC-CAT-001, HU-TECH-CAT-001 |
+| HU-UI-CAT-001 | Cards de producto con jerarquía clara | UI_UX | P0 | EN_PROGRESO | HU-FUNC-CAT-001, HU-UI-FOUND-001 |
 
 ### Carrito
 
 | ID | Título | Tipo | Prioridad | Estado | Dependencias |
 |----|--------|------|-----------|--------|--------------|
-| HU-FUNC-CART-001 | Agregar, ajustar y eliminar productos del carrito local | FUNCIONAL | P0 | PENDIENTE | HU-FUNC-CAT-001, HU-TECH-CART-001 |
-| HU-TECH-CART-001 | Persistencia de carrito + price_snapshot | TECNICA | P0 | PENDIENTE | HU-TECH-FOUND-003, HU-TECH-CAT-001 |
-| HU-UI-CART-001 | Carrito con CTA fijo "Ir a pagar" | UI_UX | P0 | PENDIENTE | HU-FUNC-CART-001, HU-UI-FOUND-001 |
+| HU-FUNC-CART-001 | Agregar, ajustar y eliminar productos del carrito local | FUNCIONAL | P0 | EN_PROGRESO | HU-FUNC-CAT-001, HU-TECH-CART-001 |
+| HU-TECH-CART-001 | Persistencia de carrito + price_snapshot | TECNICA | P0 | EN_PROGRESO | HU-TECH-FOUND-003, HU-TECH-CAT-001 |
+| HU-UI-CART-001 | Carrito con CTA fijo "Ir a pagar" | UI_UX | P0 | EN_PROGRESO | HU-FUNC-CART-001, HU-UI-FOUND-001 |
 
 ### Pricing/Envío
 

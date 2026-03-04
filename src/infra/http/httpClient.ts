@@ -26,15 +26,22 @@ export async function httpRequest<T>(options: HttpRequestOptions): Promise<HttpR
   const timeoutId = setTimeout(() => controller.abort(), requestTimeout);
 
   try {
-    const token = await SecureStorage.getToken();
     const requestHeaders: Record<string, string> = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       ...headers,
     };
 
-    if (token) {
-      requestHeaders['Authorization'] = `Bearer ${token}`;
+    const consumerKey = await SecureStorage.getConsumerKey();
+    const consumerSecret = await SecureStorage.getConsumerSecret();
+    if (consumerKey && consumerSecret) {
+      const encoded = btoa(`${consumerKey}:${consumerSecret}`);
+      requestHeaders['Authorization'] = `Basic ${encoded}`;
+    } else {
+      const token = await SecureStorage.getToken();
+      if (token) {
+        requestHeaders['Authorization'] = `Bearer ${token}`;
+      }
     }
 
     const response = await fetch(url, {
