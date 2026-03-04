@@ -4,9 +4,13 @@ import { StatusBar } from 'expo-status-bar';
 import { SessionManager } from '../src/infra/telemetry/sessionManager';
 import { TelemetryService } from '../src/infra/telemetry/telemetryService';
 import { JobRunner } from '../src/infra/sync/jobRunner';
+import { setupApiKeys } from '../src/core/config/setupApiKeys';
 
 export default function RootLayout() {
   useEffect(() => {
+    // Initialize API keys from local config (gitignored)
+    setupApiKeys();
+
     // Initialize session and telemetry on app boot
     SessionManager.initSession();
     TelemetryService.track('app_boot');
