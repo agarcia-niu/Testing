@@ -1,6 +1,6 @@
 export const Config = {
   api: {
-    baseUrl: '', // Set when connecting to real WooCommerce
+    baseUrl: 'https://aromadelrosalinvestments.com/wp-json/wc/v3',
     timeout: 15000, // 15 seconds
   },
   sync: {
