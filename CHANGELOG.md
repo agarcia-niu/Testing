@@ -6,6 +6,20 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 
 ---
 
+## [0.3.1] - 2026-03-04
+
+### Agregado
+- `planning/07_api-contracts/woocommerce-endpoints.md` — Endpoints WooCommerce documentados desde referencia API oficial (4 endpoints, 3 usados en MVP).
+- `planning/07_api-contracts/order-contract.md` — Contrato de creación de órdenes con payload completo, validaciones pre-envío y response esperado.
+- `planning/03_architecture/woocommerce-integration.md` — Arquitectura de integración con 4 flujos (catálogo, auth, checkout, pedidos) y diagramas de secuencia.
+- `planning/08_non-functional/api-security.md` — Política de seguridad API: manejo de credenciales, almacenamiento seguro y política de no exposición.
+
+### Modificado
+- `planning/07_api-contracts/README.md` — Actualizado con endpoints confirmados y gaps identificados (GET /orders, GET /orders/{id}).
+- Planning actualizado para Phase 1 MVP.
+
+---
+
 ## [0.3.0] - 2026-03-01
 
 ### Agregado — Phase 0B (Governance)
