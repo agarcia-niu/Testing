@@ -1,4 +1,5 @@
 import * as SecureStore from 'expo-secure-store';
+import { Platform } from 'react-native';
 
 const KEYS = {
   AUTH_TOKEN: 'auth_token',
@@ -7,53 +8,68 @@ const KEYS = {
   CONSUMER_SECRET: 'wc_consumer_secret',
 } as const;
 
+// Fallback for web where SecureStore is not available
+const webStorage = {
+  async getItemAsync(key: string): Promise<string | null> {
+    return localStorage.getItem(key);
+  },
+  async setItemAsync(key: string, value: string): Promise<void> {
+    localStorage.setItem(key, value);
+  },
+  async deleteItemAsync(key: string): Promise<void> {
+    localStorage.removeItem(key);
+  },
+};
+
+const store = Platform.OS === 'web' ? webStorage : SecureStore;
+
 export const SecureStorage = {
   async saveToken(token: string): Promise<void> {
-    await SecureStore.setItemAsync(KEYS.AUTH_TOKEN, token);
+    await store.setItemAsync(KEYS.AUTH_TOKEN, token);
   },
 
   async getToken(): Promise<string | null> {
-    return SecureStore.getItemAsync(KEYS.AUTH_TOKEN);
+    return store.getItemAsync(KEYS.AUTH_TOKEN);
   },
 
   async saveUserId(userId: string): Promise<void> {
-    await SecureStore.setItemAsync(KEYS.USER_ID, userId);
+    await store.setItemAsync(KEYS.USER_ID, userId);
   },
 
   async getUserId(): Promise<string | null> {
-    return SecureStore.getItemAsync(KEYS.USER_ID);
+    return store.getItemAsync(KEYS.USER_ID);
   },
 
   async saveConsumerKey(key: string): Promise<void> {
-    await SecureStore.setItemAsync(KEYS.CONSUMER_KEY, key);
+    await store.setItemAsync(KEYS.CONSUMER_KEY, key);
   },
 
   async getConsumerKey(): Promise<string | null> {
-    return SecureStore.getItemAsync(KEYS.CONSUMER_KEY);
+    return store.getItemAsync(KEYS.CONSUMER_KEY);
   },
 
   async saveConsumerSecret(secret: string): Promise<void> {
-    await SecureStore.setItemAsync(KEYS.CONSUMER_SECRET, secret);
+    await store.setItemAsync(KEYS.CONSUMER_SECRET, secret);
   },
 
   async getConsumerSecret(): Promise<string | null> {
-    return SecureStore.getItemAsync(KEYS.CONSUMER_SECRET);
+    return store.getItemAsync(KEYS.CONSUMER_SECRET);
   },
 
   async clearAll(): Promise<void> {
-    await SecureStore.deleteItemAsync(KEYS.AUTH_TOKEN);
-    await SecureStore.deleteItemAsync(KEYS.USER_ID);
-    await SecureStore.deleteItemAsync(KEYS.CONSUMER_KEY);
-    await SecureStore.deleteItemAsync(KEYS.CONSUMER_SECRET);
+    await store.deleteItemAsync(KEYS.AUTH_TOKEN);
+    await store.deleteItemAsync(KEYS.USER_ID);
+    await store.deleteItemAsync(KEYS.CONSUMER_KEY);
+    await store.deleteItemAsync(KEYS.CONSUMER_SECRET);
   },
 
   async hasSession(): Promise<boolean> {
-    const token = await SecureStore.getItemAsync(KEYS.AUTH_TOKEN);
+    const token = await store.getItemAsync(KEYS.AUTH_TOKEN);
     return token !== null;
   },
 
   async hasConsumerKeys(): Promise<boolean> {
-    const key = await SecureStore.getItemAsync(KEYS.CONSUMER_KEY);
+    const key = await store.getItemAsync(KEYS.CONSUMER_KEY);
     return key !== null;
   },
 };
