@@ -1,17 +1,28 @@
 import * as SQLite from 'expo-sqlite';
+import { Platform } from 'react-native';
 import { Config } from '../../core/config';
 import { initialMigration } from './migrations/001_initial';
+import { createWebDatabase, WebSQLiteDatabase } from './webDatabase';
 
-let db: SQLite.SQLiteDatabase | null = null;
+type Database = SQLite.SQLiteDatabase | WebSQLiteDatabase;
+
+let db: Database | null = null;
 
 const migrations = [
   { version: 1, migrate: initialMigration },
 ];
 
-export async function getDatabase(): Promise<SQLite.SQLiteDatabase> {
+export async function getDatabase(): Promise<Database> {
   if (db) return db;
-  db = await SQLite.openDatabaseAsync(Config.storage.dbName);
-  await runMigrations(db);
+
+  if (Platform.OS === 'web') {
+    db = createWebDatabase();
+    return db;
+  }
+
+  const sqliteDb = await SQLite.openDatabaseAsync(Config.storage.dbName);
+  await runMigrations(sqliteDb);
+  db = sqliteDb;
   return db;
 }
 
