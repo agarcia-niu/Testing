@@ -1,0 +1,22 @@
+# Expo cache (critical - causes permission issues)
+.expo/
+
+# Documentation and planning (not needed for build)
+planning/
+branding/
+governance-template.md
+CHANGELOG.md
+CLAUDE.md
+README.md
+.claude/
+
+# Git
+.git/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
